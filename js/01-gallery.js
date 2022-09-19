@@ -21,6 +21,7 @@ gallery.insertAdjacentHTML("beforeend", markupGallery);
 
 gallery.addEventListener("click", (e) => {
   e.preventDefault();
+  // console.log(e.target.nodeName)
   if (e.target.nodeName !== "IMG") {
     return;
   }
