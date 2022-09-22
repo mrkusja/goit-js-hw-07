@@ -25,15 +25,13 @@ gallery.addEventListener("click", (e) => {
   if (e.target.nodeName !== "IMG") {
     return;
   }
-  const instance = basicLightbox.create(
-    `<img src="${e.target.dataset.source}" width="1200" height="800">`
-  );
-  instance.show();
+  const instance = basicLightbox.create(`<img src="${e.target.dataset.source}" width="1200" height="800">`, {onShow, onClose});
+  instance.onShow();
 
   window.addEventListener("keydown", function (e) {
     if (e.code === "Escape") {
       // console.log(e);
-      instance.close();
+      instance.onClose();
       //  document.querySelector('div .modal').onClick = instance.close()
     }
   });

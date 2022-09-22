@@ -19,14 +19,15 @@ const markupGallery = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", markupGallery);
 
-gallery.addEventListener('click', e => {
-    e.preventDefault()
+new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
 
-    if (e.target.nodeName !== 'IMG') {
-        return;
-      } 
-       const lightbox = new SimpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionDelay: 250,
-       });  
-})
+// gallery.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   if (e.target.nodeName !== "IMG") {
+//     return;
+//   }
+// });
