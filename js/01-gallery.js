@@ -21,7 +21,6 @@ gallery.insertAdjacentHTML("beforeend", markupGallery);
 
 gallery.addEventListener("click", (e) => {
   e.preventDefault();
-  // console.log(e.target.nodeName)
   if (e.target.nodeName !== "IMG") {
     return;
   }
@@ -43,12 +42,8 @@ gallery.addEventListener("click", (e) => {
 
   window.addEventListener("keydown", function (e) {
     if (e.code === "Escape") {
-      // console.log(e);
       instance.close();
       //  document.querySelector('div .modal').onClick = instance.close()
     }
   });
 });
-
-// console.log(gallery);
-// console.log(galleryItems);
